@@ -51,11 +51,7 @@ a {
     margin-right: 10px;
 
 }
-@media screen and (max-width: 520px) {　
-    .logo {
-        margin-top: 20px;
-    }
-}
+
 @media screen and (max-width: 520px) {
     .logo > img {
         width: 250px;
