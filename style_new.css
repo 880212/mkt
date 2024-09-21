@@ -84,6 +84,7 @@ a.contact {                         /* Xとメールマークの左側の余白 
 @media screen and (max-width: 520px) {
     .header ul li .li a img {         /* スマホサイズでのXとメールマークの幅を20pxと小さく指定 */
         width: 10px;
+        margin-right: 20px;
     }
 }
 
