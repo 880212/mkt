@@ -54,12 +54,11 @@ a {
 @media screen and (max-width: 520px) {
     .logo > img {
         width: 250px;
-        margin-top: 5px;
     }
 }
 @media screen and (max-width: 520px) {
     .logo  {
-        margin-top: 5px;
+        margin-top: 10px;
     }
 }
 
