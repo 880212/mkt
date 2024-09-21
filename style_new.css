@@ -55,7 +55,7 @@ a {
 @media screen and (max-width: 520px) {
     .logo > img {
         width: 250px;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 }
 
@@ -101,7 +101,7 @@ a.contact {                         /* Xとメールマークの左側の余白 
 
 /* この下の二つの#douyoの指定文はもっと下（195行目あたり）に持って行く方が判りやすい */
 #douyo {                           /* 「どうよ最近」の上下の余白、左右中央*/
-    margin: 50px auto 50px;
+    margin: 45px auto 50px;
     }
 
 @media screen and (max-width: 520px) {
