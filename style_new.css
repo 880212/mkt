@@ -53,7 +53,7 @@ a {
 }
 @media screen and (max-width: 520px) {　
     .logo {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
 @media screen and (max-width: 520px) {
@@ -83,13 +83,13 @@ a.contact {                         /* Xとメールマークの左側の余白 
 
 @media screen and (max-width: 520px) {
     .header ul li .li a img {         /* スマホサイズでのXとメールマークの幅を20pxと小さく指定 */
-        width: 20px;
+        width: 10px;
     }
 }
 
 @media screen and (max-width: 520px) {
     a.contact {                       /* スマホサイズでのXとメールマークの左側の余白 */
-        margin-left: 20px;
+        margin-left: 30px;
     }
 }
 /***** header(ここまで) *****/
@@ -110,6 +110,7 @@ a.contact {                         /* Xとメールマークの左側の余白 
 @media screen and (max-width: 520px) {
     #douyo {                    /* スマホサイズで「どうよ最近」の幅を小さく指定 */
         width: 140px;
+        margin-top: 50px auto 50px;
     }
 }
 
