@@ -54,11 +54,12 @@ a {
 @media screen and (max-width: 520px) {
     .logo > img {
         width: 250px;
+        margin-top: 15px;
     }
 }
 @media screen and (max-width: 520px) {
     .logo  {
-        margin-top: 20px;
+        margin-top: 15px;              /*スマホサイズでのロゴの上余白を指定 */
     }
 }
 
