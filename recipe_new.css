@@ -1,16 +1,14 @@
-
-/****** 全体的に上から下、親要素から子要素へと配置を入れ替えました ******/
-
-body {                   /* カードブロックがふわっと出現する仕方の設定です */
-  -webkit-animation: fadeIn 2.5s ease-in-out 0s 1 normal;
-  animation: fadeIn 4s ease-in-out 0s 1 normal;
+@charset "UTF-8";
+body {                   /* 画像などがふわっと出現する仕方の設定です */
+    -webkit-animation: fadeIn 5.5s ease 0s 1 normal;
+    animation: fadeIn 5.5s ease 0s 1 normal;
   }
   @keyframes fadeIn {
     0% {
-        opacity: 0
+      opacity: 0
     }
     100% {
-        opacity: 1
+      opacity: 1
     }
   }
   @-webkit-keyframes fadeIn {
@@ -22,75 +20,175 @@ body {                   /* カードブロックがふわっと出現する仕�
     }
   }
 
-  body {           /* コード全体のフォント種類、フォントサイズ、背景画像とその背景の覆い方、文字色、太字を指定 */
+body {            /* コード全体のフォント種類、フォントサイズ、背景画像とその背景の覆い方、文字色、太字を指定 */
     font-family: 'Noto Serif JP', serif;
     font-size: 15px;
     background-image: url(IMG-8573.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    color:#5d627b;
+    color:#00070f;
     font-weight:bold;
+}
+
+/* 下の a{……}はコード内の全てのaに関わるものなので、コードの下の方からここに移動しました。内容はリンク画像が1秒かけてゆっくり現れる現われ方を指定。 */
+a {
+    transition: all 1s ease-in-out; /* 文字色だけ 1秒かけて はじめと終わりの変化をゆっくりと */
   }
 
-  img {              /* コード全体の画像の幅を親要素の幅の100%に設定 */
-    width: 100%;
-  }
 
-  .example {         /* カードブロックの上下左右余白、幅、フォントサイズ、行間隔を指定 */
-    margin: 120px auto 70px;
-    width: 400px;
-    font-size: 13px;
-    line-height: 1.5;
-  }
 
-  .example {         /* カードブロックの枠のシャドウを指定 */
-    box-shadow: 2px 2px 4px #c9c9c4;
-  }
+/***** header(ここから) *****/
+.header {
+    width:95%;                          /*ヘッダー部の左右に2.5%ずつの余白を指定 */
+    margin: 0 auto 9px auto;
+}
 
-  @media screen and (max-width: 440px) {
-    .example {        /* スマホサイズでカードブロックの幅を規定。片側余白が80pxの半分 */
-      width: calc(100vw - 80px);
-    }
-  }
 
-  .box11 {           /* カードブロックの内側余白、外側余白、文字色、背景色、枠のシャドウを指定 */
-    padding: 0.9em 1em;
-    margin: 0.9em auto;
-    background: white;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-  }
-
-  p.card-listImage{               /* 画像の周囲の余白、中央配置、画像幅を指定 */
-    margin: 40px auto 10px; /*上は50px、横は中央寄せ、下は10pxにする*/
-    display: block; /*中央寄せにするためのコード*/
-    width: 60%;/*ここで画像が枠の何%の幅かを調整できる（大きくすると画像が大きくなり、余白が小さくなる）*/
-  }
-
-  h2.card-listTitle{               /* タイトルの中央配置、周囲の余白を指定 */
-    text-align: center;
-    margin: 0px auto 0px;
-  }
-
-  .card-listTitle {              /* タイトルの太字、フォントサイズ、周囲余白を指定、marginの2行は上のh2.card-listTitleで記述しているので削除可能。また、h2.card-listTitleと.cad-listTitleは同じ要素を表しているので、統一可能 */
-    font-weight: bold;
-    font-size: 13px;
-  }
-
-  p.card-listAuthor{              /* サブタイトルの中央配置、フォントサイズを指定 */
-    text-align: center;
-    font-size: 10px;
-  }
-
-  p.card-listText{              /* カードコラム本文の周囲の余白、下余白、幅、フォントサイズ、両端ぞろえを指定 */
-    margin: 18px auto;
+.logo {                                /*ロゴの右寄せ、上下右の余白を指定 */
+    text-align: right;
+    margin-top: 60px;
     margin-bottom: 30px;
-    width: 60%;
-    font-size: 10px;
-    text-align: justify;
-    text-justify: inter-ideograph;
-  }
-  @media screen and (max-width: 440px) {
-    p.card-listText {             /* スマホサイズでカードコラム本文の幅を指定 */
-      width: 80%;
+    margin-right: 10px;
+
+}
+@media screen and (max-width: 520px) {
+    .logo > img {
+        width: 250px;
+        margin-top: 15px;
     }
-  }
+}
+@media screen and (max-width: 520px) {
+    .logo  {
+        margin-top: 15px;              /*スマホサイズでのロゴの上余白を指定 */
+    }
+}
+
+
+.header ul {                     /* Xとメールマークの横並び、右寄せ指定。align-itemsの行は不要かも */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* liの使い方が違うので微妙。最初の2行は機能していない。margin-rightのみメールマークの右の余白を決めている */
+.header ul li {
+    margin-left: 25px;
+    text-align: left;
+    margin-right: 30px;
+}
+
+a.contact {                         /* Xとメールマークの左側の余白 */
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 520px) {
+    .header ul li .li a img {         /* ★スマホサイズでのXとメールマークの幅を20pxと小さく指定 */
+        width: 5px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    a.contact {                       /* スマホサイズでのXとメールマークの左側の余白 */
+        margin-left: 10px;
+    }
+}
+/***** header(ここまで) *****/
+
+/***** contener(ここから) *****/
+.contener {                          /* 花画像～2枚のバナー画像の左右余白10%ずつ、左右中央配置 */
+    margin: auto;
+    width:80%;
+    /* すぐ下の行、最後の;を忘れていたので、追加しました */
+    text-align:center;
+}
+
+/* この下の二つの#douyoの指定文はもっと下（195行目あたり）に持って行く方が判りやすい */
+#douyo {                           /* 「どうよ最近」の上下の余白、左右中央*/
+    margin: 45px auto 50px;
+    }
+
+@media screen and (max-width: 520px) {
+    #douyo {                    /* ★スマホサイズで「どうよ最近」の幅を小さく指定 */
+        width: 140px;
+        margin-top: 45px auto 50px;
+    }
+}
+
+.header_img {                 /* 花画像を含むブロック の上下余白中央配置指定*/
+    width:100%;
+    /* すぐ下の行、最後の;を忘れていたので、追加しました */
+    margin: 50px auto 0px auto;
+}
+
+.header_img img {               /* 花画像の幅、上下余白なし、左余白指定。左余白なぜか10pxを指定していますが、autoでいいのでは？*/
+    width: 40%;
+    margin : auto;
+}
+
+@media screen and (max-width: 520px) {
+    .header_img img {                    /* スマホサイズで花画像の幅を拡大 */
+        width: 60%;
+        transform: translateX(0px);       /* 花画像を左右に動かすときは0pxに値を入れれば動きます。プラスは右、マイナスは左へ移動 */
+    }
+}
+
+.container_service {              /* 「どうよ最近」～二つのバナー画像の幅、上下左右の余白を指定 */
+    width:100%;
+    margin: 10px 0% 10px 0%;
+}
+
+@media screen and (max-width: 520px) {
+    .container_service {           /* スマホサイズでの「どうよ最近」～二つのバナー画像の幅を拡大、全体を左へ移動、margin文は上と同じなので削除可能 */
+        width:110%;
+        transform: translateX(-15px);
+    }
+}
+
+
+/* 二つのバナー画像の上下マージン、中央配置を指定だが、削除してもいいかもしれない */
+a.example {
+    margin : 0%;
+    text-align:center;
+}
+
+
+.service_block {             /* 二つのバナー画像の横並びを指定*/
+    width:100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content:space-around;
+}
+
+.service {             /* 各々のバナー画像の上下左右の余白指定、width:50%;は無くてもいいかもしれない */
+    width: 50%;
+    margin: 0px;
+    padding:0;
+    display: block;
+}
+
+.service img {                 /* 各々のバナー画像の幅を指定、中央配置 */
+    width: 80%;
+    text-align: center;
+}
+
+@media screen and (max-width: 520px) {
+    .service img {             /* スマホサイズで各々のバナー画像の幅を拡大 */
+        width: 96%;
+    }
+}
+
+/***** contener(ここまで) *****/
+
+/***** footer(ここから) *****/
+.footer {                   /* フッターの上の湯白を指定 */
+    margin-top: 50px;
+}
+
+.copy {                 /* 一番下の©2021 xxxの中央配置、背景色、文字色、文字サイズ、上下の余白を指定 */
+    text-align: center;
+    background: #72640a;
+    color: #fff;
+    font-size: 12px;
+    padding: 7px 0 3px;
+}
+/***** footer(ここまで) *****/
