@@ -58,7 +58,7 @@ a {
 }
 @media screen and (max-width: 520px) {
     .logo  {
-        margin-top: 15px;              /*★スマホサイズでのロゴの上余白を指定 */
+        margin-top: 30px;              /*★スマホサイズでのロゴの上余白を指定 */
     }
 }
 
@@ -81,7 +81,7 @@ a.contact {                         /* Xとメールマークの左側の余白 
 }
 
 @media screen and (max-width: 520px) {
-    .header ul li .li a img {         /* ★スマホサイズでのXとメールマークの幅を指定 */
+    .header ul li a img {         /* ★スマホサイズでのXとメールマークの幅を指定 */
         width: 5px;
     }
 }
