@@ -71,8 +71,6 @@ a {
 
 /* liの使い方が違うので微妙。最初の2行は機能していない。margin-rightのみメールマークの右の余白を決めている */
 .header ul li {
-    margin-left: 25px;
-    text-align: left;
     margin-right: 30px;
 }
 
