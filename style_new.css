@@ -69,7 +69,7 @@ a {
     align-items: center;
 }
 
-/* margin-righがメールマークの右の余白を決めている */
+/* margin-rightがメールマークの右の余白を決めている */
 .header ul li {
     margin-right: 30px;
 }
